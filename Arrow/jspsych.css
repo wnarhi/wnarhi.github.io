@@ -130,6 +130,7 @@ ul {
 }
 
 .cropimg {
+ overflow: invisible;
  position: absolute;
  clip: rect(50px,50px,50px,50px);
 }
