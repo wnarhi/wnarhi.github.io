@@ -130,7 +130,12 @@ ul {
 }
 
 .cropimg {
- overflow: hidden;
- position: absolute;
- margin: -100px -100px -100px -100px;
+    width: 500px; /* width of container */
+    height: 500px; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+.cropimg img {
+    margin: -100px -100px -100px -100px;
 }
