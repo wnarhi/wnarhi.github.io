@@ -130,5 +130,6 @@ ul {
 }
 
 .cropimg img{
-    margin: 100px 0px 0px 0px;
+ clip: rect(100px 100px 100px 100xp);
+ margin: -100px 0px 0px 0px;
 }
