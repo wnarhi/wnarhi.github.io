@@ -131,5 +131,5 @@ ul {
 
 .cropimg img{
  clip-path: inset(100px);
- top: -10px;
+ top: -100px;
 }
