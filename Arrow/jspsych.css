@@ -128,3 +128,8 @@ ul {
 #jspsych-data-display {
   text-align: left;
 }
+
+.cropimg {
+ position: absolute;
+ clip: rect(50px,50px,50px,50px);
+}
