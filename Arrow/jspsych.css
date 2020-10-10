@@ -132,5 +132,5 @@ ul {
 .cropimg {
  overflow: hidden;
  position: absolute;
- clip: rect(50px,50px,50px,50px);
+ clip-path: inset(50px 50px 50px 50px);
 }
