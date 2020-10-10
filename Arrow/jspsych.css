@@ -129,11 +129,3 @@ ul {
   text-align: left;
 }
 
-.cropimg {
-    width: 500px; /* width of container */
-    height: 500px; /* height of container */
-    overflow: hidden;
-    border: 5px solid black;
-}
-
-
