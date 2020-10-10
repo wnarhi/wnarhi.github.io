@@ -130,6 +130,6 @@ ul {
 }
 
 .cropimg img{
- clip-path: inset(100px);
- margin: -100px 0px 0px 0px;
+ clip-path: inset(50px);
+ margin: -50px;
 }
