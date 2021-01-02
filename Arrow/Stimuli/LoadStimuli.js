@@ -18,4 +18,4 @@ document.write('<img id="square1" src="https://wnarhi.github.io/Arrow/Stimuli/Sq
 
 <img id="target" src="https://wnarhi.github.io/Arrow/Stimuli/target.png" style="margin-left:-1000px;margin-top:-2000px">
 
-<img id="fixation" src="https://wnarhi.github.io/Arrow/Stimuli/fixation.png" style="margin-left:-1000px;margin-top:-2000px">);
+<img id="fixation" src="https://wnarhi.github.io/Arrow/Stimuli/fixation.png" style="margin-left:-1000px;margin-top:-2000px">');
