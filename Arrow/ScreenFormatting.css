@@ -291,3 +291,13 @@ body {
 }
 
 .close:hover { background: #00d9ff; }
+
+.likertButtons label {
+  display: inline-block;
+  text-align: center;
+  margin: 0 0.2em;
+}
+.likertButtons label input[type="radio"] {
+  display: block;
+  margin: 0.5em auto;
+}
