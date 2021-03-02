@@ -92,12 +92,11 @@
     </div>
 
       <!-- Start form here to capture comments -->
-      <!-- REMOVE COMMENT
-      <form name="turkSubmit" id="turkSubmit" action="https://www.mturk.com/mturk/externalSubmit" method="POST">
+      <form name="turkSubmit" id="turkSubmit" action="https://workersandbox.mturk.com/mturk/externalSubmit" method="POST">
       <input type="hidden" name="assignmentId" id="assignmentId" value="" >
       <input type="hidden" name="foo" value="" >
       <input type="submit" value="Submit" name="submitButton" id="submitButton" style="display: none"></form>
-      -->
+
       <!-- submit to turk
       https://workersandbox.mturk.com/mturk/externalSubmit
       https://www.mturk.com/mturk/externalSubmit
@@ -198,11 +197,9 @@
     </script>
 
     <script>
-      /* 
       let WORKERID = (IsOnTurk())? GetWorkerId() : prompt("You don't look like an mTurker! " +
       "Enter an ID to save your data with (any number/string will do). Note your id is used to seed the experiment rng:", "workID");
       let ASSIGNMENTID = (IsOnTurk())? GetAssignmentId() : prompt("Set assignment number (doesnt matter for testing):", "assignmentId");
-      */
 
       /* disable context menu */
       document.oncontextmenu = function() {
@@ -211,7 +208,6 @@
 
       const SeedRNG = Math.seedrandom();
       const seedID = Chance(SeedRNG); // Use their ID as the shuffle seed, so you can trace back their trials
-      const numTrialsPerPart = [10, 560]; // [10, 512] practice, experiment
       const numTrials = 64;
       const trialList = Array.from({length: numTrials * numBlocks}, (_, i) => i + 1)
       let blockCounter = [];
@@ -303,25 +299,6 @@
       var yClick = -1;
       var relClick = -1;
 
-      /* Setup reused image variable */
-      //let img = new Image();
-      //img.crossOrigin = "anonymous";
-
-      /* Setup ring image */
-      //let ringImg = new Image();
-      //ringImg.crossOrigin = "anonymous";
-      //ringImg.src = $('#wheelCW')[0].src;
-
-      /* Setup arrow images */
-      //let arrowImg = new Image();
-      //arrowImg.crossOrigin = "anonymous";
-      //arrowImg.src = $('#arrow1')[0].src;
-
-      /* Setup fixation images */
-      //let fixImg = new Image();
-      //fixImg.crossOrigin = "anonymous";
-      //fixImg.src = $('#fixation')[0].src;
-
       function GetInfo() {
         age = prompt('Before we start, can you tell me how old you are (in years)?');
 
@@ -373,9 +350,10 @@
         alert('Thanks! The experiment will now begin. Try to remember all the colored squares!')
 
         // save a file letting me know that someone made it this far
-        //const blobx = new Blob([JSON.stringify(WORKERID)], {type: "application/json"});
-        //const storageRefx = firebase.storage().ref('started/' + WORKERID + '.json');
-        //storageRefx.put(blobx);
+        const blobx = new Blob([JSON.stringify(WORKERID)], {type: "application/json"});
+        const storageRefx = firebase.storage().ref('started/' + WORKERID + '.json');
+        storageRefx.put(blobx);
+
         window.location.href = '#openModal';
       }
 
@@ -863,8 +841,6 @@
 
       /* Done with the experiment */
       function Done() {
-        // calculate their overall accuracy (Practice + Test)
-        // const OverallAcc = (((TestAcc.reduce((a, b) => a + b, 0) + PracticeAcc.reduce((a, b) => a + b, 0)) / (TestAcc.length + PracticeAcc.length)) * 100).toFixed(2);
         document.getElementById("doneText").innerHTML = 'You finished! Just one question before you go:' + 
           '<br><br><i>On a scale from 0(never) to 10(always), how often did the arrow seem to point to the same location as the target cue that appeared after the colored squares?</i><br>' +
           '<br><input type="radio" name="eq" value="0"> 0 ' +
@@ -960,7 +936,8 @@
         /* submit after waiting a few seconds to make sure data got sent */
         setTimeout(function() {
           document.getElementById("saving").innerHTML = "Data saved. Thank you for your participation!";
-
+          document.forms[0].submit();
+          
           // close full screen if still full-screened
           if (document.cancelFullScreen) {
             document.cancelFullScreen();
