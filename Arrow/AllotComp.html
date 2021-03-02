@@ -39,12 +39,14 @@ let ASSIGNMENTID = (IsOnTurk())? GetAssignmentId() : prompt("Set assignment numb
 
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyBeD1E8RCvOck3CeWzXbg2hGURf-sSrx8A",
-    authDomain: "scotti-92222.firebaseapp.com",
-    databaseURL: "https://scotti-92222.firebaseio.com",
-    projectId: "scotti-92222",
-    storageBucket: "scotti-92222.appspot.com",
-    messagingSenderId: "123079954596"
+      apiKey: "AIzaSyDzhLYalLDu9SuW7a1Z3cTmUoQkE48c6ho",
+      authDomain: "online-data-8bab7.firebaseapp.com",
+      databaseURL: "https://online-data-8bab7.firebaseio.com",
+      projectId: "online-data-8bab7",
+      storageBucket: "online-data-8bab7.appspot.com",
+      messagingSenderId: "546730698231",
+      appId: "1:546730698231:web:c3286536d41feba0063af2",
+      measurementId: "G-J17135W661"
 };
 firebase.initializeApp(config);
 
@@ -55,7 +57,7 @@ document.oncontextmenu = function() {
 
 /* Choose what to save and then put it on the server */
 function SaveData() {
-  if ($('#comments').val() == '4115863586') {
+  if ($('#comments').val() == 'WMV5VMW') { //password
     $('#done').children().hide();
     $('#saving').show();
     $('#assignmentId').val(GetAssignmentId());
@@ -69,7 +71,7 @@ function SaveData() {
 
       /* save to Firebase server */
       const blob = new Blob([JSON.stringify(d)], {type: "application/json"});
-      const storageRef = firebase.storage().ref('data/' + WORKERID + '.json');
+      const storageRef = firebase.storage().ref('allotComp/' + WORKERID + '.json');
       storageRef.put(blob);
 
       document.getElementById("saving").innerHTML = "Submitting HIT...";
