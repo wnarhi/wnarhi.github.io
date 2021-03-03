@@ -62,7 +62,7 @@
       <p>An Institutional Review Board responsible for human subjects research at The Ohio State University reviewed this research project and found it to be acceptable, according to applicable state and federal regulations and University policies designed to protect the rights and welfare of participants in research.</p>
       <p><b>Contacts and Questions:</b> For questions, concerns, or complaints about the study, or you feel you have been harmed as a result of study participation, you may contact William Narhi at narhi-martinez.1@osu.edu. For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact Ms. Sandra Meadows in the Office of Responsible Research Practices at meadows.8@osu.edu.</p>
       <p><b>Electronic consent:</b> You may print a copy of this consent form for your records. If you wish to continue with the experiment, please click the button below.</p>
-      <p><center><b>Clicking the button below indicates that:</b><ul><li>You have read the above information</li><li>You are 18 years of age or older</li><li>You have normal or corrected-to-normal visual acuity and color vision</li><li>You voluntarily agree to participate</li></ul></center></p>
+      <p><center><b>Clicking the button below indicates that:</b><ul><li>You have read the above information</li><li>You are between 18 and 40 years of age</li><li>You have normal or corrected-to-normal visual acuity and color vision</li><li>You voluntarily agree to participate</li></ul></center></p>
             <br></center><p style="text-align: center"><a href="javascript:void(0);" onclick="$('#consentDiv').hide();$('#instructions').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">I consent to participate in this study</a></p>
     </div>
 
@@ -302,8 +302,8 @@
       function GetInfo() {
         age = prompt('Before we start, can you tell me how old you are (in years)?');
 
-        while (age > 100 || age < 18 || !(age>=18)) {
-          age = prompt('Can you tell me how old you are (e.g., 18, not the year you were born)?');
+        while (age > 40 || age < 18 || !(age>=18)) {
+          age = prompt('Can you tell me how old you are (e.g., 25, not the year you were born)?');
         }
 
         sex = prompt('And are you male (M), female (F), non-binary (NB), or prefer not to answer (NA)?');
@@ -843,16 +843,16 @@
       function Done() {
         document.getElementById("doneText").innerHTML = 'You finished! Just one question before you go:' + 
           '<br><br><i>On a scale from 0(never) to 10(always), how often did the arrow seem to point to the same location as the target cue that appeared after the colored squares?</i><br>' +
-          '<br><input type="radio" name="eq" value="0"> 0 ' +
-          '<input type="radio" name="eq" value="1"> 1 ' +
-          '<input type="radio" name="eq" value="2"> 2 ' +
-          '<input type="radio" name="eq" value="3"> 3 ' +
-          '<input type="radio" name="eq" value="4"> 4 ' +
-          '<input type="radio" name="eq" value="5"> 5 ' +
-          '<input type="radio" name="eq" value="6"> 6 ' +
-          '<input type="radio" name="eq" value="7"> 7 ' +
-          '<input type="radio" name="eq" value="8"> 8 ' +
-          '<input type="radio" name="eq" value="9"> 9 ' +
+          '<br><input type="radio" name="eq" value="0"> 0  ' +
+          '<input type="radio" name="eq" value="1"> 1  ' +
+          '<input type="radio" name="eq" value="2"> 2  ' +
+          '<input type="radio" name="eq" value="3"> 3  ' +
+          '<input type="radio" name="eq" value="4"> 4  ' +
+          '<input type="radio" name="eq" value="5"> 5  ' +
+          '<input type="radio" name="eq" value="6"> 6  ' +
+          '<input type="radio" name="eq" value="7"> 7  ' +
+          '<input type="radio" name="eq" value="8"> 8  ' +
+          '<input type="radio" name="eq" value="9"> 9  ' +
           '<input type="radio" name="eq" value="10"> 10<br>' +
           '<br><br>Any comments for us?<br><br>' +
           '<textarea name="comments" id="comments" style="width: 400px; height: 200px"></textarea><br><br>';
