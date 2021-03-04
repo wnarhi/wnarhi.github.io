@@ -63,32 +63,95 @@
       <p><b>Contacts and Questions:</b> For questions, concerns, or complaints about the study, or you feel you have been harmed as a result of study participation, you may contact William Narhi at narhi-martinez.1@osu.edu. For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact Ms. Sandra Meadows in the Office of Responsible Research Practices at meadows.8@osu.edu.</p>
       <p><b>Electronic consent:</b> You may print a copy of this consent form for your records. If you wish to continue with the experiment, please click the button below.</p>
       <p><center><b>Clicking the button below indicates that:</b><ul><li>You have read the above information</li><li>You are between 18 and 40 years of age</li><li>You have normal or corrected-to-normal visual acuity and color vision</li><li>You voluntarily agree to participate</li></ul></center></p>
-            <br></center><p style="text-align: center"><a href="javascript:void(0);" onclick="$('#consentDiv').hide();$('#instructions').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">I consent to participate in this study</a></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#consentDiv').hide();$('#instructions1').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">I consent to participate in this study</a></center></p>
     </div>
 
+    <!-- Formatting -->
+    <style>
+      .instruct {
+        width:500;
+        height:500;
+      }
+
+      .centInst {
+        position: relative;
+        height:500;
+        width:500;
+        left:750;
+      }
+
+      .center {
+        position: absolute;
+        top:300px;
+        left:300px;
+        transform: translate(-50%, -50%);
+      }
+
+      </style>
     <!-- Instructions: -->
-    <div id="instructions" style="display: none">
-      <p><b><center>This HIT lasts approximately one hour.</center><br>You will receive $10.00 for HIT completion. <br>If you have previously completed this HIT then you are ineligible to participate.</b><br>Please do not disable the creation of text dialogs as these will sometimes be used to relay instructions.</p><br>
-      <p>In this HIT, you will report the color of a square.</p>
-      <p>Every trial will start with an arrow indicating one of four locations on your screen. For example:</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/Arrows/arrow1.png" width="50"></p>
-      <p>Next, four colored squares will appear, try and remember all of them. For example:</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/SquaresExample.png" width="500"></p>
-      <p>Be sure to keep your eyes fixated on the center dot for as long as it is on your screen, as your target could appear at any of the four locations.</p>
-      <p>A black frame will then appear in one of the four locations, indicating which square we would like you to report the color of. For example:</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/TargetExample.png" width="500"></p>
-      <p>The location cued by the arrow will match the location of the black frame most of the time, but not all of the time. Remember that we want you to report the color indicated by the <b><em>black frame</em></b> on every trial, regardless of where the arrow was pointing.</p>
-      <p>You will report the color of the square that had appeared in the same location as the black frame to the best of your ability on a color wheel by clicking on a color using your mouse (trackpad not recommended).</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/Wheels/wheelCW.png" width="500"></p>
-      <p>Lastly, you will let us know how confident you feel in the color you selected on a scale from <b>1 (completely guessing)</b> to <b>4 (highly confident)</b> by pressing the corresponding number keys (1, 2, 3, or 4).</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/ConfidenceExample.png" width="500"></p>
-      <p>The correct color will then be revealed to you before the next trial begins</p>
-      <p align="center"><img src="https://wnarhi.github.io/Arrow/Stimuli/Wheels/feedbackCW140.png" width="500"></p>
-      <p>It is important that you be as <em>precise and as accurate as possible</em> when reporting the color of the target object. Also note that since this is an experiment designed to study memory, we require that you <b>do not take any breaks after starting this study</b>.</p>
-      <p>If you are unsure of the correct color, just give your best guess. You are not allowed to use any external tools to remember objects. The task should become easier over time as you get more practice with it, and all we ask is that you understand the task and give your best effort.</p>
-      <p>After completing all the trials a short survey will be presented for you to answer before finishing the experiment.</p>
-      <p>Your time is greatly appreciated!</p>
-      <p style="text-align: center"><a href="javascript:void(0);" onclick="$('#instructions').hide();GetInfo();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">Start Experiment</a></p>
+    <div class="instruct" id="instructions1" style="display: none">
+      <p><b><center>This HIT lasts approximately one hour.<br>You will receive $10.00 for HIT completion. <br>If you have previously completed this HIT then you are ineligible to participate.</b><br>Please do not disable the creation of text dialogs as these will sometimes be used to relay instructions.</center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions1').hide();$('#instructions2').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct1" style="display: inline;">Press here to begin viewing a trial walkthrough</a></center></p>
+    </div>
+    <div class="instruct" id="instructions2" style="display: none">
+      <p><center>In this HIT, you will report the color of a square.</center></p>
+      <p><center>Every trial will start with an arrow indicating one of four locations on your screen. For example:</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/ArrowExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions2').hide();$('#instructions3').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct2" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions3" style="display: none">
+      <p><center>Next, four colored squares will appear, try and remember all of them. For example:</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/SquaresExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions3').hide();$('#instructions4').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct3" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions4" style="display: none">
+      <p><center>Be sure to keep your eyes fixated on the center dot for as long as it is on your screen, as your target could appear at any of the four locations.</center></p>
+      <p><center>A black frame will then appear in one of the four locations, indicating which square we would like you to report the color of. For example:</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/TargetExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions4').hide();$('#instructions5').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct4" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions5" style="display: none">
+      <p><center>You will report the color of the square that had appeared in the same location as the <b>black frame</b> to the best of your ability on a color wheel by clicking on a color using your mouse (trackpad not recommended).</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/WheelExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions5').hide();$('#instructions6').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct5" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions6" style="display: none">
+      <p><center>Lastly, you will let us know how confident you feel in the color you selected on a scale from <b>1 (completely guessing)</b> to <b>4 (highly confident)</b> by pressing the corresponding number keys (1, 2, 3, or 4).</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/ConfidenceExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions6').hide();$('#instructions7').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct6" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions7" style="display: none">
+      <p><center>The correct color will then be revealed to you before the next trial begins</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/FeedbackExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions7').hide();$('#instructions8').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct7" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions8" style="display: none">
+      <p><center>The location cued by the arrow will match the location of the black frame most of the time, but not all of the time.<br>Remember that we want you to report the color indicated by the <b><em>black frame</em></b> on every trial, regardless of where the arrow was pointing.</center></p>
+      <p><center>For instance, in the example trial you just viewed the arrow had indicated the upper left square, but the black frame appeared in the lower right.<br>Therefore, we wanted you to report the color that had appeared in the lower right</center></p>
+      <div class="centInst">
+        <center><img src="https://wnarhi.github.io/Arrow/Stimuli/FinalExample.png" width=500></img></center>
+      </div>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions8').hide();$('#instructions9').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct8" style="display: inline;">Press here to continue</a></center></p>
+    </div>
+    <div class="instruct" id="instructions9" style="display: none">
+      <p><center>It is important that you be as <em>precise and as accurate as possible</em> when reporting the color of the target object. Also note that since this is an experiment designed to study memory, we require that you <b>do not take any breaks after starting this study</b>.</center></p>
+      <p><center>If you are unsure of the correct color, just give your best guess. You are not allowed to use any external tools to remember objects. The task should become easier over time as you get more practice with it, and all we ask is that you understand the task and give your best effort.</center></p>
+      <p><center>After completing all the trials a short survey will be presented for you to answer before finishing the experiment.</center></p>
+      <p><center>Your time is greatly appreciated!</center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions9').hide();$('#instructions1').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct9" style="display: inline;">Click here to view this walkthrough again</a></center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions9').hide();GetInfo();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">Click here to start the experiment</a></center></p>
     </div>
 
       <!-- Start form here to capture comments -->
@@ -106,19 +169,9 @@
      <div id="openModal" class="modalDialog">
       <div>
         <a href="#coolExperiment" onclick="requestFullScreen();NextTrial();" title="Close" class="close">S</a>
-        <p id="openModal_text">Please click 'S' to continue</p>
+        <p id="openModal_text">Remember to always keep your eyes on the fixation dot!<br>Please click the 'S' to continue</p>
       </div>
     </div>
-
-    <!-- Formatting Images -->
-    <style>
-    .center {
-      position: absolute;
-      top:300px;
-      left:300px;
-      transform: translate(-50%, -50%);
-    }
-    </style>
 
     <!-- Basic structure for a trial: -->
     <div id="showTrial" style="width:600px; height:600px;">
@@ -147,7 +200,7 @@
         <img id="wheel" src="https://wnarhi.github.io/Arrow/Stimuli/Wheels/wheelCW.png" width=761 height=475></img>
       </div>
       <div id="confidence" class="center" style="cursor:none;">
-        <p style="text-align: center">Confidence?</p>
+        <p style="text-align: center">Confidence?<br>{from 1(low) to 4(high)}</p>
         <p><input type="text" id="confBox" style="text-align: center" size="11"></p>
       </div>
       <div id="feedback" class="center" style="cursor:none;">
