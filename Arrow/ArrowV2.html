@@ -201,7 +201,7 @@
       </div>
       <div id="confidence" class="center" style="cursor:none;">
         <p style="text-align: center">Confidence?<br>{from 1(low) to 4(high)}</p>
-        <p><input type="text" id="confBox" style="text-align: center" size="11"></p>
+        <p><center><input type="text" id="confBox" style="text-align:center" size="5"></center></p>
       </div>
       <div id="feedback" class="center" style="cursor:none;">
         <img id="feedImg" src="https://wnarhi.github.io/Arrow/Stimuli/Wheels/feedbackCW1.png" width=761 height=475></img>
@@ -705,6 +705,7 @@
 
       function ShowingTrial() {
         $('#arrow').show();
+        $('#arrow').css('cursor:none;');
         arrowStart = new Date;
         setTimeout(function() {
           $('#arrow').hide();
@@ -713,11 +714,13 @@
           setTimeout(function() {
             preDur[trialNumber] = new Date - preStart;
             $('#allItems').show();
+            $('#allItems').css('cursor:none;');
             squareStart = new Date;
             setTimeout(function() {
               $('#allItems').hide();
               squareDur[trialNumber] = new Date - squareStart;
               $('#masks').show();
+              $('#masks').css('cursor:none;');
               maskStart = new Date;
               setTimeout(function() {
                 $('#masks').hide();
@@ -726,6 +729,7 @@
                 setTimeout(function() {
                   postDur[trialNumber] = new Date - postStart;
                   $('#targ').show();
+                  $('#targ').css('cursor:none;');
                   targetStart = new Date;
                   setTimeout(function() {
                     $('#targ').hide();
