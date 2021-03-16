@@ -183,7 +183,7 @@
      <!-- Request Full-Screen --> 
      <div id="openModal" class="modalDialog">
       <div>
-        <a href="#coolExperiment" onclick="requestFullScreen();NextTrial();const startExpTime = new Date().getTime();" title="Close" class="close">S</a>
+        <a href="#coolExperiment" onclick="requestFullScreen();NextTrial();startExpTime = new Date().getTime();" title="Close" class="close">S</a>
         <p id="openModal_text">Remember to always keep your eyes on the fixation dot!<br>Please click the 'S' to continue</p>
       </div>
     </div>
@@ -331,6 +331,7 @@
       var wheelAngleT = -1;
       var angle = 0;
       let arrowBias = 0;
+      const startExpTime = new Date().getTime();
       const expDate = new Date();
       let mouseMoved = 0;
       let blockStart = 0;
