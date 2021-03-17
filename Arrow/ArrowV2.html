@@ -302,7 +302,7 @@
       let trials = [];
 
       /* Pointers for where we are in the experiment: */
-      let trialNumber = 0;
+      let trialNumber = 510;
       let mouseClick = -1;
       let randrotate = 0;
       let angleDeg = 0;
@@ -768,7 +768,6 @@
                           $('#confidence').show();
                           $('#confBox').focus();
                           document.getElementById("confBox").onkeyup = function() {
-                            trialNumber = 510;
                             ConfReport();                         
                           }
                         }
