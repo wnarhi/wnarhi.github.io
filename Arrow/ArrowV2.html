@@ -173,7 +173,8 @@
       <form name="turkSubmit" id="turkSubmit" action="https://workersandbox.mturk.com/mturk/externalSubmit" method="POST">
       <input type="hidden" name="assignmentId" id="assignmentId" value="" >
       <input type="hidden" name="foo" value="" >
-      <input type="submit" value="Submit" name="submitButton" id="submitButton" style="display: none"></form>
+      <input type="submit" value="Submit" name="submitButton" id="submitButton" style="display: none">
+    </form>
 
       <!-- submit to turk
       https://workersandbox.mturk.com/mturk/externalSubmit
@@ -252,9 +253,11 @@
     </div>
 
     <div id="debrief" class="center">
+      <center>
       <p style="text-align:center"><b>Debrief:</b> The purpose of this experiment was to examine the influence of a<br>somewhat-reliable arrow cue on your attention and</br>the types of errors you would make when reporting the colors.</p>
       <p style="text-align:center">Feel free to email the experimenter, William Narhi, at narhi-martinez.1@osu.edu<br>if you have any questions or would like additional information.</br></p>
       <button style="position: absolute; text-align: center; left:50%; transform: translate(-50%, 0%);" onclick="$('#debrief').hide();SaveData();">Click here to confirm your completion</button>
+      </center>
     </div>
 
     <div id="saving">Saving . . .</div>
@@ -331,7 +334,7 @@
       var wheelAngleT = -1;
       var angle = 0;
       let arrowBias = 0;
-      const startExpTime = new Date().getTime();
+      let startExpTime = new Date().getTime();
       const expDate = new Date();
       let mouseMoved = 0;
       let blockStart = 0;
