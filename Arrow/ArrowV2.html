@@ -954,6 +954,7 @@
       /* What to save and put it on server */
       function SaveData() {
         $('#saving').show();
+        $('#assignmentId').val(GetAssignmentId());
         const endDate = new Date().getTime();
         const d = {
           //"WORKERID": WORKERID,
