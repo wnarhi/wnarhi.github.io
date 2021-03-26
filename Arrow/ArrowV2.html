@@ -166,7 +166,12 @@
       <p><center>After completing all the trials a short survey will be presented for you to answer before finishing the experiment.</center></p>
       <p><center>Your time is greatly appreciated!</center></p>
       <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions11').hide();$('#instructions1').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="instruct11" style="display: inline;">Click here to view this walkthrough again</a></center></p>
-      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions11').hide();GetInfo();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">Click here to start the experiment</a></center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#instructions11').hide();$('#popquiz').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startQuiz" style="display: inline;">Click here to start the experiment</a></center></p>
+    </div>
+    <div class="instruct" id="popquiz" style="display: none">
+      <p><center>Pop quiz! Which cue will indicate the colored square we want you to report on every trial?</center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#popquiz').hide();$('#instructions1').show();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="wrong" style="display: inline;">Black Arrow</a></center></p>
+      <p style="text-align: center"><center><a href="javascript:void(0);" onclick="$('#popquiz').hide();GetInfo();document.body.scrollTop = document.documentElement.scrollTop = 0;" id="startExperimentButton" style="display: inline;">Black Frame</a></center></p>
     </div>
 
       <!-- Start form here to capture comments -->
