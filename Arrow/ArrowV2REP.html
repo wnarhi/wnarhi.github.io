@@ -994,7 +994,6 @@
         /* submit after waiting a few seconds to make sure data got sent */
         setTimeout(function() {
           document.getElementById("saving").innerHTML = "Data saved. Thank you for your participation!";
-          document.forms[0].submit();
           
           // close full screen if still full-screened
           if (document.cancelFullScreen) {
