@@ -986,7 +986,7 @@
         const blob = new Blob([JSON.stringify(d)], {
           type: "application/json"
         });
-        const storageRef = firebase.storage().ref('ProbArrowV2/' + subjID + '.json');
+        const storageRef = firebase.storage().ref('ProbArrowV2REP/' + subjID + '.json');
         storageRef.put(blob);
 
         document.getElementById("saving").innerHTML = "Submitting...";
